@@ -6,6 +6,9 @@
     border: 0.5px solid var(--color-primary-100);
     padding: 0px 12px;
     overflow: hidden;
+    &:hover {
+        border-color: var(--color-secondary-500);
+    }
 }
 input {
     border: none;

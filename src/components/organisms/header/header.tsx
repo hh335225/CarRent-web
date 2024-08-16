@@ -12,7 +12,7 @@ import SearchBar from "../../molecules/searchBar/searchBar.tsx";
 const Header = () => {
     return (
         <section className="header">
-            <Logo />
+            <a href="/"><Logo /></a>
             <SearchBar placeholder={"Search something here"} />
             <div className="info">
                 <Icon icon={Heart} noti={true}/>
