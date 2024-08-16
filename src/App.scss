@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 :root {
     --color-primary: #3563E9;
     --color-primary-100: #D6E4FD;
@@ -5,8 +7,12 @@
     --color-secondary-500: #1A202C;
     --color-success: #000000;
     --color-white: #ffffff;
+    --color-red: #FF4423;
+    --color-red-bold: #DB2719;
 }
 
 * {
     background-color: var(--color-white);
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: medium;
 }

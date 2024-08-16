@@ -15,8 +15,8 @@ const Header = () => {
             <Logo />
             <SearchBar placeholder={"Search something here"} />
             <div className="info">
-                <Icon icon={Heart} />
-                <Icon icon={Notification} />
+                <Icon icon={Heart} noti={true}/>
+                <Icon icon={Notification} noti={true}/>
                 <Icon icon={Setting} />
                 <Avatar url={avatarImage} />
             </div>

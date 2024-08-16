@@ -1,4 +1,5 @@
 .icon {
+    position: relative;
     display: flex;
     border-radius: 50%;
     border: 0.5px solid var(--color-primary-100);
@@ -10,6 +11,10 @@
         svg {
             color: var(--color-secondary-500);
         }
+        .notiIcon {
+            background-color: var(--color-red-bold);
+
+        }
     }
 }
 
@@ -19,4 +24,15 @@ svg {
     &:hover {
         color: var(--color-secondary-500);
     }
+}
+
+.notiIcon {
+    position: absolute;
+    top: 4%;
+    right: 4%;
+
+    background-color: var(--color-red);
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
 }

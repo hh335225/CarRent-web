@@ -11,6 +11,7 @@ const Icon: React.FC<IconProps> = ({ icon: IconComponent, size = 44, noti = fals
     return (
         <div className="icon" style={{ width: size, height: size }}>
             {IconComponent && <IconComponent />}
+            {noti && <div className="notiIcon" />}
         </div>
     );
 }
