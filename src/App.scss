@@ -9,10 +9,25 @@
     --color-white: #ffffff;
     --color-red: #FF4423;
     --color-red-bold: #DB2719;
+    --color-background: #F6F7F9;
 }
 
 * {
-    background-color: var(--color-white);
+    background-color: var(--color-background);
     font-family: "Plus Jakarta Sans", sans-serif;
     font-weight: medium;
+}
+
+* * {
+    background-color: var(--color-white);
+}
+
+a {
+    text-decoration: none;
+}
+
+li, ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
