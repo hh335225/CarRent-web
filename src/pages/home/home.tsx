@@ -7,7 +7,12 @@ import carListData from "../../database/carListData.tsx";
 const Home = () => {
     return (
         <section className="home">
+            <div className="title">Popular Car</div>
             <CarList list={carListData}/>
+
+            <div className="title">Recomendation Car</div>
+            <CarList list={carListData}/>
+            <button className="showMoreCar">Show more car</button>
         </section>
     )
 }
