@@ -1,0 +1,95 @@
+.carCard {
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.flexRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.flexCol {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.carInfo-top {
+    .carName {
+        font-size: 20px;
+    }
+    .carType {
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--color-secondary-300);
+    }
+    .likeCar {
+        padding: 0;
+        border: 0;
+    }
+}
+
+.carImage {
+    position: relative;
+    height: 100px;
+    display: flex;
+    align-items: flex-end;
+    img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+}
+
+.carImage::before {
+    content: "";
+    position: absolute;
+    top: 70%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+    z-index: 1;
+}
+
+.carInfo-bottom {
+    .carDetail {
+        color: var(--color-secondary-300);
+        font-size: 14px;
+
+        svg {
+            height: 14px;
+        }
+    }
+
+    .price-per-day {
+        padding-top: 12px;
+        align-items: center;
+
+        >span {
+            .textBold {
+                font-size: 16px;
+                font-weight: 600;
+                color: var(--color-secondary-500);
+            }
+
+            .textSmall {
+                font-size: 12px;
+                color: var(--color-secondary-300);
+            }
+        }
+
+        button {
+            border: none;
+            border-radius: 4px;
+            background-color: var(--color-primary);
+            color: var(--color-white);
+            padding: 12px 20px;
+
+            &:hover {
+                background-color: var(--color-primary-600);
+            }
+        }
+    }
+}
