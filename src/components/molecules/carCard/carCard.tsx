@@ -15,6 +15,12 @@ const CarCard: React.FC<CarModel> = (props) => {
 
     const { name, type, capacity, gasoline, steering, retalPricePerDay, like } = props;
 
+    const [likeCar, setLikeCar] = React.useState(like ?? false);
+
+    const onClickLike = React.useCallback(() => {
+        setLikeCar(!likeCar);
+    },[likeCar]);
+
     return (
         <div className="carCard flexCol" style={{ width: carWidth, height: carHeight }}>
             <div className="carInfo-top flexRow">
@@ -22,11 +28,11 @@ const CarCard: React.FC<CarModel> = (props) => {
                     <h3 className="carName">{name}</h3>
                     <span className="carType">{type}</span>
                 </div>
-                <button className="likeCar">
-                    {like ? <LikeIcon /> : <UnlikeIcon />}
+                <button className="likeCar" onClick={onClickLike}>
+                    {likeCar ? <LikeIcon className="likeIcon"/> : <UnlikeIcon className="unlikeIcon"/>}
                 </button>
             </div>
-            
+
             <div className="carImage">
                 <img src={carImage} alt="" />
             </div>

@@ -27,6 +27,15 @@
     .likeCar {
         padding: 0;
         border: 0;
+        .likeIcon {
+            color: var(--color-red);
+        }
+        .unlikeIcon {
+            color: var(--color-secondary-300);
+        }
+        svg:hover {
+            color: var(--color-red-bold);
+        }
     }
 }
 
