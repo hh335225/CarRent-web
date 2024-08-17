@@ -3,6 +3,11 @@
 }
 
 .header {
+    box-sizing: border-box;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    z-index: 100;
     display: flex;
     padding: 16px 40px;
     align-items: center;
