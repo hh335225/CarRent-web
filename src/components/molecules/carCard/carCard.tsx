@@ -1,7 +1,6 @@
 import React from "react";
 import './carCard.scss';
 import CarModel from "../../../model/carModel.tsx";
-import carImage from "../../../assets/car.png";
 import { ReactComponent as LikeIcon } from "../../../assets/icons/like.svg";
 import { ReactComponent as UnlikeIcon } from "../../../assets/icons/unlike.svg";
 import { ReactComponent as GasStationIcon } from "../../../assets/icons/gas-station.svg";
@@ -9,11 +8,7 @@ import { ReactComponent as PeopleIcon } from "../../../assets/icons/people.svg";
 import { ReactComponent as SteeringIcon } from "../../../assets/icons/steering.svg";
 
 const CarCard: React.FC<CarModel> = (props) => {
-    const screenWidth = window.screen.width;
-    const carWidth = (screenWidth - 2 * 40 - 5 * 30) / 6;
-    const carHeight = carWidth * 4 / 3;
-
-    const { name, type, capacity, gasoline, steering, retalPricePerDay, like } = props;
+    const { name, type, imageUrl, capacity, gasoline, steering, retalPricePerDay, like } = props;
 
     const [likeCar, setLikeCar] = React.useState(like ?? false);
 
@@ -22,7 +17,7 @@ const CarCard: React.FC<CarModel> = (props) => {
     },[likeCar]);
 
     return (
-        <div className="carCard flexCol" style={{ width: carWidth, height: carHeight }}>
+        <div className="carCard flexCol">
             <div className="carInfo-top flexRow">
                 <div>
                     <h3 className="carName">{name}</h3>
@@ -34,7 +29,7 @@ const CarCard: React.FC<CarModel> = (props) => {
             </div>
 
             <div className="carImage">
-                <img src={carImage} alt="" />
+                <img src={imageUrl} alt="" />
             </div>
 
             <div className="carInfo-bottom">

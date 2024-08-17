@@ -2,6 +2,7 @@
     padding: 20px;
     border-radius: 4px;
     box-shadow: 0 0 5px var(--color-blur-box);
+    
     &:hover {
         box-shadow: 0 0 12px var(--color-blur-box);
         transform: translateY(-2px);
@@ -73,10 +74,10 @@
 .carInfo-bottom {
     .carDetail {
         color: var(--color-secondary-300);
-        font-size: 14px;
+        font-size: 12px;
 
         svg {
-            height: 14px;
+            height: 12px;
         }
     }
 

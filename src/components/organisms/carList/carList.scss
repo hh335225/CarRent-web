@@ -1,0 +1,11 @@
+.carList {
+    background-color: var(--color-background);
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
+
+    .carCard {
+        aspect-ratio: 3 / 4;
+    }
+}

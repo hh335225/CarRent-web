@@ -1,11 +1,13 @@
 import React from "react";
 import './home.scss';
 import CarCard from "../../components/molecules/carCard/carCard.tsx";
+import CarList from "../../components/organisms/carList/carList.tsx";
+import carListData from "../../database/carListData.tsx";
 
 const Home = () => {
     return (
         <section className="home">
-            <CarCard name={"Koenigsegg"} imageUrl={""} type={"Sport"} capacity={2} steering={"Manual"} gasoline={90} retalPricePerDay={99.00} like={false}/>
+            <CarList list={carListData}/>
         </section>
     )
 }
